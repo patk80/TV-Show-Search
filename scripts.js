@@ -15,10 +15,11 @@ const makeImages = (shows) => {
 
         if(result.show.image) {
             const img = document.createElement("IMG");
+            img.style.margin = "5px";
             img.src = result.show.image.medium;
             imageResults.append(img);
         }
-        
+
     }
 
 }
