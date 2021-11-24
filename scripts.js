@@ -1,4 +1,5 @@
-const form = document.querySelector("#search-form");
+const form       = document.querySelector("#search-form");
+let imageResults = document.querySelector("#image-results-container");
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -9,12 +10,15 @@ form.addEventListener("submit", async function (e) {
 });
 
 const makeImages = (shows) => {
+
     for(let result of shows) {
+
         if(result.show.image) {
             const img = document.createElement("IMG");
             img.src = result.show.image.medium;
-            document.body.append(img);
+            imageResults.append(img);
         }
-
+        
     }
+
 }
